@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>WK01_DigitalCamera | BUTLER36HUS&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Computer Vision: Algorithms and Applications2. Image formation2.3 The digital camera2.3.2 Color When the incoming light hits the imaging sensor, light from different parts of the spectrum is somehow i">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WK01_DigitalCamera">
+<meta property="og:url" content="http://butler36hus.github.io/blog/2022/01/09/WK01-DigitalCamera/index.html">
+<meta property="og:site_name" content="BUTLER36HUS&#39;s Blog">
+<meta property="og:description" content="Computer Vision: Algorithms and Applications2. Image formation2.3 The digital camera2.3.2 Color When the incoming light hits the imaging sensor, light from different parts of the spectrum is somehow i">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-01-09T09:12:27.000Z">
+<meta property="article:modified_time" content="2022-01-09T09:15:03.814Z">
+<meta property="article:author" content="BUTLER36">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="BUTLER36HUS&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+  <!-- Katex -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
+
+  <!-- The loading of KaTeX is deferred to speed up page rendering -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js" integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx" crossorigin="anonymous"></script>
+
+  <!-- To automatically render math in text elements, include the auto-render extension: -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+      onload="renderMathInElement(document.body,{
+        delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+        ],});"></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">BUTLER36HUS&#39;s Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://BUTLER36HUS.github.io/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-WK01-DigitalCamera" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2022/01/09/WK01-DigitalCamera/" class="article-date">
+  <time datetime="2022-01-09T09:12:27.000Z" itemprop="datePublished">2022-01-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      WK01_DigitalCamera
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Computer-Vision-Algorithms-and-Applications"><a href="#Computer-Vision-Algorithms-and-Applications" class="headerlink" title="Computer Vision: Algorithms and Applications"></a>Computer Vision: Algorithms and Applications</h1><h2 id="2-Image-formation"><a href="#2-Image-formation" class="headerlink" title="2. Image formation"></a>2. Image formation</h2><h3 id="2-3-The-digital-camera"><a href="#2-3-The-digital-camera" class="headerlink" title="2.3 The digital camera"></a>2.3 The digital camera</h3><h4 id="2-3-2-Color"><a href="#2-3-2-Color" class="headerlink" title="2.3.2 Color"></a>2.3.2 Color</h4><ul>
+<li>When the incoming light hits the imaging sensor, light from different parts of the spectrum is somehow integrated into the discrete red, green, and blue (RGB) color values that we see in<br>a digital image<ul>
+<li>P87</li>
+</ul>
+</li>
+<li>RGB is <em>additive</em> primary colors</li>
+<li>the existence of <strong>three primaries</strong> is a result of the tri-stimulus nature of the human visual system, since we have three different kinds of cells called <em>cones</em>, each of which responds selectively to a different portion of the color spectrum </li>
+<li>it is preferable to use many more wavelengths for machine applications<ul>
+<li>红外线 near-infrared (NIR) range</li>
+</ul>
+</li>
+</ul>
+<h5 id="CIE-RGB-and-XYZ"><a href="#CIE-RGB-and-XYZ" class="headerlink" title="CIE RGB and XYZ"></a>CIE RGB and XYZ</h5><ul>
+<li>CIE’s RGB<ul>
+<li>In the 1930s, the <strong>Commission Internationale d’Eclairage (CIE)</strong> standardized the <strong>RGB</strong> representation using the primary colors of<ul>
+<li> red (700.0nm wavelength),</li>
+<li> green (546.1nm),</li>
+<li> and blue (435.8nm).</li>
+</ul>
+</li>
+<li>Problems:<ul>
+<li>(440,550) nm for certain pure spectra in the blue–green range, a <em>negative</em> amount of red light has to be added</li>
+<li>(400,440) nm a certain amount of red has to be added to the color being matched to get a color match</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>CIE’s XYZ<ul>
+<li>Because of the problem associated with <em>mixing negative light</em>, the CIE also developed a new color space called XYZ, which contains all of the pure spectral colors within its positive octant<ul>
+<li>It also maps the Y axis to the <em><strong>luminance</strong></em><ul>
+<li> perceived relative brightness,</li>
+</ul>
+</li>
+<li> and maps <em>pure white</em> to a diagonal (equal-valued) vector.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>The transformation from RGB to XYZ is<br>given by $$\begin{bmatrix} X\ Y \ Z \end{bmatrix}=\frac{1}{0.176967}\begin{bmatrix} 0.49 &amp; 0.31&amp; 0.20 \ 0.17697 &amp; 0.81240 &amp; 0.01063 \ 0.00 &amp; 0.01 &amp; 0.99 \end{bmatrix} \begin{bmatrix} R\ G \ B \end{bmatrix}$$<ul>
+<li>has the matrix normalized so that the Y value corresponding to <em>pure red</em> is 1</li>
+<li>a more commonly used form is to omit the leading fraction<ul>
+<li>so that the second row adds up to one, i.e., the RGB triplet (1, 1, 1) maps to a Y value of 1</li>
+</ul>
+</li>
+<li>If we divide the XYZ values by the sum of X+Y+Z, we obtain the chromaticity coordinate $$x=\frac{X}{X+Y+Z},y=\frac{Y}{X+Y+Z},z=\frac{Z}{X+Y+Z}$$  which sum to 1<ul>
+<li>discard the absolute intensity of a given color<br>sample and just represent its pure color</li>
+</ul>
+</li>
+<li>A convenient representation for color values is therefore Yxy (luminance plus the two most distinctive chrominance components)<ul>
+<li>when we want to tease apart luminanceand chromaticity</li>
+</ul>
+</li>
+<li>it does not actually predict <em><strong>how well humans perceive</strong></em> differences in color or luminance</li>
+</ul>
+</li>
+</ul>
+<h4 id="L-a-b"><a href="#L-a-b" class="headerlink" title="L*a*b*"></a>L*a*b*</h4><ul>
+<li>Because the response of the human visual system is <em><strong>roughly logarithmic</strong></em> (we can perceive relative luminance differences of about 1%), the CIE defined a non-linear re-mapping of theXYZ space called L*a*b*<ul>
+<li>f(t) $$f(t) =<br>\begin{cases}<br>t^{1/3} &amp;\text{if } t&gt;\delta^3 \<br>t/(3\delta^2)+2\delta/3 &amp;\text{else, }<br>\end{cases}$$<ul>
+<li>is a finite-slope approximation to the cube root with $\delta = 6/29$</li>
+</ul>
+</li>
+<li>The L* component of lightness is $$L^*=116f(\frac{Y}{Y_n})$$<ul>
+<li>Yn is the luminance value for <em>nominal white</em> (Fairchild 2013)</li>
+</ul>
+</li>
+<li>In a similar fashion, the a* and b* components are defined as $$a^* = 500[f(\frac{X}{X_n})-f(\frac{Y}{Y_n})] ,\text{and}, b^* = 500[f(\frac{Y}{Y_n})-f(\frac{Z}{Z_n})]$$<ul>
+<li>$(X_n,Y_n,Z_n)$ is the <em>measured white point</em></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://butler36hus.github.io/blog/2022/01/09/WK01-DigitalCamera/" data-id="cky71gon50002j0rt8ic51bpc" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/2022/01/09/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/2022/01/09/Lab03-Struct/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Lab03_Struct</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/01/">一月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/12/">十二月 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/2022/01/09/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2022/01/09/WK01-DigitalCamera/">WK01_DigitalCamera</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2022/01/09/Lab03-Struct/">Lab03_Struct</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2022/01/09/Lab02-Pointers-Memory/">Lab02_Pointers&amp;Memory</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2021/12/21/TIP-%E5%B0%86hexo%E7%94%9F%E6%88%90%E7%9A%84%E5%8D%9A%E5%AE%A2%E7%BD%91%E9%A1%B5%E6%94%BE%E5%9C%A8Github-io%E5%AD%90%E7%9B%AE%E5%BD%95-Put-hexo-generated-blog-pages-into-subdirectories-of-Github-Pages/">TIP-将hexo生成的博客网页放在Github.io子目录</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 BUTLER36<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+
+  
+<script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/blog/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
